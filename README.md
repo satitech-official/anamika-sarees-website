@@ -1,98 +1,83 @@
-# vinext-starter
+<div align="center">
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+<img src="assets/readme-cover.svg" alt="Anamika Sarees premium website preview" width="100%" />
 
-## Prerequisites
+<br />
 
-- Node.js `>=22.13.0`
+# Anamika Sarees — Premium Fashion Website
 
-## Quick Start
+A luxury, editorial-style and fully responsive storefront created for **Anamika Sarees, Indore**. The experience highlights bridal sarees, wedding wear, festive collections and designer lehengas with smooth interactions and direct WhatsApp enquiries.
+
+<br />
+
+<a href="https://satitech-official.github.io/anamika-sarees-website/">
+  <img src="https://img.shields.io/badge/VIEW_LIVE_WEBSITE-561426?style=for-the-badge&logo=googlechrome&logoColor=white" alt="View live Anamika Sarees website" />
+</a>
+&nbsp;
+<a href="https://wa.me/919111985445">
+  <img src="https://img.shields.io/badge/CONTACT_ON_WHATSAPP-25D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="Contact Anamika Sarees on WhatsApp" />
+</a>
+
+</div>
+
+---
+
+## About the Project
+
+The website repositions Anamika Sarees as a refined fashion destination rather than a conventional catalogue. It uses a wine, ivory and antique-gold visual system, large editorial typography and carefully structured content to create a premium shopping journey across mobile, tablet and desktop screens.
+
+## Key Features
+
+- Luxury editorial hero section and premium collection layouts
+- Fully responsive design for mobile, tablet, laptop and desktop
+- Filterable Bridal, Silk, Festive and Lehenga collections
+- Direct product enquiries through WhatsApp
+- Functional personal appointment form with validation
+- Store address, calling, Instagram and Google Maps integration
+- Smooth reveal animations, testimonial slider and mobile navigation
+- Accessibility-friendly semantic HTML and reduced-motion support
+- SEO metadata, Open Graph information and custom favicon
+- Automated GitHub Pages deployment
+
+## Business Details
+
+**Anamika Sarees**  
+Bridal · Wedding · Festive Wear  
+16/1, Sitlamata Bazar Main Road, Indore  
+Call / WhatsApp: **+91 91119 85445**  
+Instagram: **@anamika__sarees**  
+Pan India Shipping Available
+
+## Technology
+
+`HTML5` · `CSS3` · `JavaScript` · `GitHub Pages` · `GitHub Actions`
+
+## Project Structure
+
+```text
+anamika-sarees-website/
+├── .github/workflows/deploy.yml
+├── assets/
+│   ├── favicon.svg
+│   └── readme-cover.svg
+├── index.html
+├── styles.css
+├── script.js
+└── README.md
+```
+
+## Run Locally
 
 ```bash
-npm install
-npm run dev
-npm run build
+git clone https://github.com/satitech-official/anamika-sarees-website.git
+cd anamika-sarees-website
+python -m http.server 8000
 ```
 
-This starter does not use `wrangler.jsonc`.
+Then open `http://localhost:8000` in your browser.
 
-## Included Shape
+---
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
-
-## Workspace Auth Headers
-
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
-
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
-```
-
-## Optional Dispatch-Owned ChatGPT Sign-In
-
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
-
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
-
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
-
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
-
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
-
-## Useful Commands
-
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+<div align="center">
+  <p>Designed and developed by <strong>SATI Technologies</strong></p>
+</div>
