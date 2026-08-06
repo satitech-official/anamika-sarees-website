@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -34,7 +34,8 @@ jobs:
         run: npx next build
 
       - name: Add nojekyll file
-        run: touch out/.nojekyll
+        shell: pwsh
+        run: New-Item -ItemType File -Path out/.nojekyll -Force
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
@@ -45,7 +46,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     steps:
       - name: Deploy to GitHub Pages
