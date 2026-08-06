@@ -1,13 +1,13 @@
 # Anamika Sarees â€” Premium Ethnic Fashion Website
 
 <p align="center">
-  <a href="https://satitech-official.github.io/anamika-sarees-website/">
+  <a href="https://anamika-sarees-indore.nikhilbaraskar551.chatgpt.site">
     <img src="https://img.shields.io/badge/LIVE%20WEBSITE-VISIT%20NOW-7b1538?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Open Anamika Sarees live website" />
   </a>
 </p>
 
 <p align="center">
-  <a href="https://satitech-official.github.io/anamika-sarees-website/">
+  <a href="https://anamika-sarees-indore.nikhilbaraskar551.chatgpt.site">
     <img src="./public/og.png" alt="Anamika Sarees premium website preview" width="100%" />
   </a>
 </p>
@@ -16,7 +16,9 @@ An elegant, responsive storefront for **Anamika Sarees, Indore**, featuring brid
 
 ## Live Website
 
-### [Open Anamika Sarees â†’](https://satitech-official.github.io/anamika-sarees-website/)
+### [Open Anamika Sarees â†’](https://anamika-sarees-indore.nikhilbaraskar551.chatgpt.site)
+
+GitHub repository: [satitech-official/anamika-sarees-website](https://github.com/satitech-official/anamika-sarees-website)
 
 ## Highlights
 
